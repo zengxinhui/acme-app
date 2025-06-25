@@ -3,5 +3,6 @@
  {:frontend
   {:target :browser
    :modules {:main {:init-fn acme.frontend.app/init}}
-   :devtools {:watch-dir "public"}
+   :devtools {:after-load acme.frontend.app/init
+              :watch-dir "public"}
    }}}
